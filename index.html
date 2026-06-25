@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Daniel Meza - Abogado Especialista en Derecho Civil. Defensa jurídica estratégica y soluciones legales eficaces.">
+    <title>Daniel Meza | Abogado Civilista</title>
+    
+    <!-- Fuentes Elegantes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* --- VARIABLES DE COLOR --- */
+        :root {
+            --primary-color: #0A192F; /* Azul Marino Profundo */
+            --secondary-color: #D4AF37; /* Dorado Clásico */
+            --secondary-dark: #b5952f;
+            --text-light: #F8F9FA;
+            --text-dark: #333333;
+            --bg-light: #FFFFFF;
+            --bg-gray: #F4F6F9;
+            --transition: all 0.3s ease;
+        }
+
+        /* --- ESTILOS GLOBALES --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-color);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 5rem 0;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 2px;
+            background-color: var(--secondary-color);
+            margin: 15px auto 0;
+        }
+
+        /* --- NAVEGACIÓN --- */
+        header {
+            background-color: var(--primary-color);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-icon {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            color: var(--secondary-color);
+            font-weight: 700;
+            border-right: 1px solid var(--secondary-color);
+            padding-right: 15px;
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+            color: var(--text-light);
+        }
+
+        .logo-text .name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            letter-spacing: 1px;
+        }
+
+        .logo-text .title {
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            color: rgba(255,255,255,0.7);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--secondary-color);
+        }
+
+        /* --- BOTONES --- */
+        .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: var(--transition);
+            cursor: pointer;
+            border: 1px solid transparent;
+        }
+
+        .btn-gold {
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        .btn-gold:hover {
+            background-color: var(--secondary-dark);
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+            color: #000;
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border-color: var(--text-light);
+            color: var(--text-light);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--secondary-color);
+            color: var(--secondary-color);
+        }
+
+        /* --- HERO SECTION (FONDO DE BIBLIOTECA) --- */
+        .hero {
+            height: 100vh;
+            /* Aquí se enlaza la imagen de fondo generada de la biblioteca */
+            background: linear-gradient(rgba(10, 25, 47, 0.85), rgba(10, 25, 47, 0.85)), 
+                        url('Gemini_Generated_Image_amc7ksamc7ksamc7.png') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            padding-top: 80px;
+            position: relative;
+            border-bottom: 5px solid var(--secondary-color);
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            color: var(--text-light);
+            font-size: 3.8rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            color: var(--text-light);
+            font-size: 1.15rem;
+            margin-bottom: 2.5rem;
+            font-weight: 300;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+        }
+
+        /* --- SOBRE MÍ (CON TU FOTO DE PERFIL) --- */
+        .about {
+            background-color: var(--bg-light);
+        }
+
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 5rem;
+        }
+
+        .about-image {
+            flex: 1;
+            position: relative;
+        }
+
+        .about-image img {
+            width: 100%;
+            border: 1px solid #ddd;
+            box-shadow: -20px 20px 0px var(--primary-color);
+            /* Aquí se enlaza tu foto de perfil de WhatsApp */
+        }
+
+        .about-image::after {
+            content: '';
+            position: absolute;
+            top: -15px;
+            right: -15px;
+            bottom: 15px;
+            left: 15px;
+            border: 2px solid var(--secondary-color);
+            z-index: -1;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-text h2 {
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+            color: var(--secondary-color);
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+            color: #555;
+            font-size: 1.05rem;
+            text-align: justify;
+        }
+
+        /* --- ÁREAS DE PRÁCTICA --- */
+        .practice-areas {
+            background-color: var(--bg-gray);
+        }
+
+        .grid-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: var(--bg-light);
+            padding: 3rem 2rem;
+            text-align: center;
+            border: 1px solid #eee;
+            transition: var(--transition);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            border-bottom: 3px solid var(--secondary-color);
+        }
+
+        .card i {
+            font-size: 3rem;
+            color: var(--secondary-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .card h4 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
+        .card p {
+            font-size: 0.95rem;
+            color: #666;
+        }
+
+        /* --- POR QUÉ ELEGIRME --- */
+        .why-me {
+            background-color: var(--primary-color);
+            color: var(--text-light);
+        }
+
+        .why-me .section-title {
+            color: var(--secondary-color);
+        }
+
+        .reasons-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .reason-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+            padding: 1.5rem;
+            background: rgba(255,255,255,0.03);
+            border-left: 3px solid var(--secondary-color);
+        }
+
+        .reason-item i {
+            color: var(--secondary-color);
+            font-size: 1.8rem;
+        }
+
+        .reason-item h4 {
+            color: var(--text-light);
+            margin-bottom: 0.5rem;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+        }
+
+        .reason-item p {
+            font-size: 0.9rem;
+            color: #ccc;
+        }
+
+        /* --- TESTIMONIOS --- */
+        .testimonials {
+            background-color: var(--bg-light);
+        }
+
+        .testimonial-card {
+            background: var(--bg-gray);
+            padding: 2.5rem;
+            font-style: italic;
+            border-radius: 5px;
+            position: relative;
+            border-top: 2px solid var(--secondary-color);
+        }
+
+        .testimonial-card p {
+            color: #444;
+            margin-bottom: 1.5rem;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            font-style: normal;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .testimonial-author i {
+            color: var(--secondary-color);
+        }
+
+        /* --- BLOG JURÍDICO --- */
+        .blog {
+            background-color: var(--bg-gray);
+        }
+
+        .blog-list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .blog-tag {
+            background-color: var(--bg-light);
+            padding: 12px 25px;
+            border: 1px solid #ddd;
+            color: var(--primary-color);
+            font-weight: 500;
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .blog-tag:hover {
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            border-color: var(--primary-color);
+        }
+
+        /* --- CONTACTO --- */
+        .contact {
+            background-color: var(--bg-light);
+        }
+
+        .contact-wrapper {
+            display: flex;
+            gap: 4rem;
+            background: var(--bg-gray);
+            padding: 4rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        .contact-info, .contact-form {
+            flex: 1;
+        }
+
+        .contact-info h3 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .social-icons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            font-size: 1.2rem;
+            transition: var(--transition);
+        }
+
+        .social-icons a:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-5px);
+        }
+
+        .contact-form form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #ccc;
+            font-family: inherit;
+            background-color: var(--bg-light);
+        }
+
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: var(--secondary-color);
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background-color: #030a13;
+            color: #888;
+            text-align: center;
+            padding: 4rem 20px 2rem;
+        }
+
+        footer h3 {
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+
+        footer p {
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+            color: #bbb;
+        }
+
+        .footer-links {
+            margin: 2rem 0;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .footer-links a {
+            font-size: 0.9rem;
+            color: #888;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--secondary-color);
+        }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 900px) {
+            .about-content, .contact-wrapper {
+                flex-direction: column;
+            }
+            .hero h1 { font-size: 2.8rem; }
+            .nav-links { display: none; } /* En un entorno real se añade un menú hamburguesa */
+            .contact-wrapper { padding: 2rem; }
+        }
+        
+        @media (max-width: 600px) {
+            .hero-buttons { flex-direction: column; }
+            .hero h1 { font-size: 2.2rem; }
+            .about-image img { box-shadow: -10px 10px 0px var(--primary-color); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- CABECERA Y NAVEGACIÓN -->
+    <header>
+        <nav>
+            <div class="logo-container">
+                <div class="logo-icon">DM</div>
+                <div class="logo-text">
+                    <span class="name">DANIEL MEZA</span>
+                    <span class="title">ABOGADO CIVILISTA</span>
+                </div>
+            </div>
+            <div class="nav-links">
+                <a href="#inicio">Inicio</a>
+                <a href="#sobre-mi">Sobre Mí</a>
+                <a href="#areas">Servicios</a>
+                <a href="#testimonios">Testimonios</a>
+                <a href="#blog">Blog</a>
+                <a href="#contacto">Contacto</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- SECCIÓN HERO (INICIO) -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>Defensa Jurídica Estratégica y Soluciones Legales Eficaces</h1>
+            <p>Brindando asesoría legal especializada en Derecho Civil, con compromiso, profesionalismo y un enfoque orientado a la protección de sus derechos e intereses.</p>
+            <div class="hero-buttons">
+                <a href="#contacto" class="btn btn-gold">Solicitar Consulta</a>
+                <a href="#contacto" class="btn btn-outline">Contactar Ahora</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOBRE MÍ -->
+    <section id="sobre-mi" class="about container">
+        <div class="about-content">
+            <div class="about-image">
+                <!-- Se enlaza exactamente el nombre de archivo que proporcionaste -->
+                <img src="WhatsApp Image 2026-06-25 at 12.06.09 AM_2.jpeg" alt="Abogado Daniel Meza">
+            </div>
+            <div class="about-text">
+                <h2>Sobre Mí</h2>
+                <h3 style="font-family: 'Montserrat'; font-size: 1.1rem; margin-bottom: 1.5rem; color: #333;">Daniel Meza | Abogado formado en la Universidad Peruana Unión y miembro del Colegio de Abogados de Lima.</h3>
+                <p>Especialista en Derecho Civil, enfocado en brindar asesoría jurídica preventiva, patrocinio legal y soluciones eficientes para personas y empresas.</p>
+                <p>Mi compromiso es ofrecer un servicio legal transparente, profesional y orientado a resultados, garantizando la protección de los derechos de cada cliente mediante estrategias jurídicas sólidas y personalizadas.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ÁREAS DE PRÁCTICA -->
+    <section id="areas" class="practice-areas">
+        <div class="container">
+            <h2 class="section-title">Áreas de Práctica</h2>
+            <div class="grid-cards">
+                <div class="card">
+                    <i class="fa-solid fa-file-contract"></i>
+                    <h4>Obligaciones y contratos</h4>
+                    <p>Asesoría en la redacción, revisión y ejecución de contratos civiles para asegurar su validez legal.</p>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-scale-unbalanced"></i>
+                    <h4>Indemnización por daños</h4>
+                    <p>Defensa y reclamo ante perjuicios causados por terceros, buscando la reparación justa.</p>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <h4>Responsabilidad civil</h4>
+                    <p>Protección legal integral ante situaciones de responsabilidad contractual y extracontractual.</p>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-house-circle-check"></i>
+                    <h4>Prescripción adquisitiva</h4>
+                    <p>Gestión de trámites para la obtención de titularidad por posesión continua y pacífica.</p>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-key"></i>
+                    <h4>Derechos reales</h4>
+                    <p>Defensa de la propiedad, posesión, usufructo y garantías sobre bienes muebles e inmuebles.</p>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-people-group"></i>
+                    <h4>Sucesiones y herencias</h4>
+                    <p>Asesoría en testamentos, declaratoria de herederos, división y partición de masa hereditaria.</p>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-gavel"></i>
+                    <h4>Procesos civiles</h4>
+                    <p>Patrocinio sólido en litigios y defensa de intereses ante el Poder Judicial.</p>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-map-location-dot"></i>
+                    <h4>Saneamiento legal</h4>
+                    <p>Regularización técnica y legal de propiedades e inmuebles ante los registros públicos.</p>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-user-tie"></i>
+                    <h4>Asesoría preventiva</h4>
+                    <p>Consultoría jurídica para mitigar riesgos legales futuros y tomar decisiones seguras.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ¿POR QUÉ ELEGIRME? -->
+    <section class="why-me">
+        <div class="container">
+            <h2 class="section-title">¿Por Qué Elegirme?</h2>
+            <div class="reasons-grid">
+                <div class="reason-item">
+                    <i class="fa-solid fa-user-check"></i>
+                    <div>
+                        <h4>Atención personalizada</h4>
+                        <p>Cada caso es único y recibe la dedicación exclusiva que merece.</p>
+                    </div>
+                </div>
+                <div class="reason-item">
+                    <i class="fa-solid fa-chess-knight"></i>
+                    <div>
+                        <h4>Estrategias adaptadas</h4>
+                        <p>Diseño de soluciones jurídicas precisas para cada situación particular.</p>
+                    </div>
+                </div>
+                <div class="reason-item">
+                    <i class="fa-solid fa-scale-balanced"></i>
+                    <div>
+                        <h4>Compromiso ético</h4>
+                        <p>Actuación basada en la integridad, honestidad y valores profesionales.</p>
+                    </div>
+                </div>
+                <div class="reason-item">
+                    <i class="fa-solid fa-comments"></i>
+                    <div>
+                        <h4>Comunicación clara</h4>
+                        <p>Información constante y transparente sobre el avance de su proceso.</p>
+                    </div>
+                </div>
+                <div class="reason-item">
+                    <i class="fa-solid fa-handshake-angle"></i>
+                    <div>
+                        <h4>Defensa eficiente</h4>
+                        <p>Protección tenaz de los intereses y derechos del cliente.</p>
+                    </div>
+                </div>
+                <div class="reason-item">
+                    <i class="fa-solid fa-binoculars"></i>
+                    <div>
+                        <h4>Enfoque preventivo</h4>
+                        <p>Asesoría orientada a evitar conflictos legales complejos en el futuro.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIOS -->
+    <section id="testimonios" class="testimonials">
+        <div class="container">
+            <h2 class="section-title">Testimonios</h2>
+            <div class="grid-cards">
+                <div class="testimonial-card">
+                    <p>"El Dr. Meza demostró un profundo conocimiento en mi caso de saneamiento de propiedad. Su comunicación fue excelente durante todo el proceso. Altamente recomendado."</p>
+                    <div class="testimonial-author">
+                        <i class="fa-solid fa-star"></i> Cliente Corporativo
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p>"Agradezco la honestidad y el enfoque estratégico en nuestro problema de sucesiones familiares. Un profesional ético y comprometido con los resultados que buscábamos."</p>
+                    <div class="testimonial-author">
+                        <i class="fa-solid fa-star"></i> Familia Rodríguez
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOG JURÍDICO -->
+    <section id="blog" class="blog">
+        <div class="container">
+            <h2 class="section-title">Blog Jurídico</h2>
+            <p style="text-align: center; color: #666;">Espacio destinado a compartir educación jurídica, análisis y actualizaciones normativas para ciudadanos.</p>
+            <div class="blog-list">
+                <span class="blog-tag">Consejos legales</span>
+                <span class="blog-tag">Análisis de casos</span>
+                <span class="blog-tag">Actualizaciones normativas</span>
+                <span class="blog-tag">Temas de Derecho Civil</span>
+                <span class="blog-tag">Educación jurídica para ciudadanos</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="contact">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h3>Defensa Jurídica Estratégica</h3>
+                    <p style="color: #666; margin-bottom: 2rem;">Agende una reunión para analizar su caso y proponer la mejor estrategia legal. Su tranquilidad es nuestra prioridad.</p>
+                    
+                    <h4 style="font-family: 'Montserrat', sans-serif; color: var(--primary-color); margin-top: 2rem;">Conectemos en Redes Sociales:</h4>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/daniels.justice7/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61591413539440" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://www.youtube.com/channel/UCyi-RWnOCQkbuulLudQDGZw" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="https://www.tiktok.com/@daniel.ms_7" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="https://www.linkedin.com/in/daniel-meza-9bb726419/?isSelfProfile=true" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form action="#" method="POST">
+                        <h4 style="font-size: 1.5rem; margin-bottom: 1.5rem; color: var(--primary-color);">Formulario de Contacto</h4>
+                        <div class="form-group">
+                            <input type="text" name="nombre" placeholder="Nombre completo" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="correo" placeholder="Correo electrónico" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" name="telefono" placeholder="Número de teléfono" required>
+                        </div>
+                        <div class="form-group">
+                            <select name="tipo_consulta" required>
+                                <option value="" disabled selected>Tipo de consulta</option>
+                                <option value="civil">Derecho Civil General</option>
+                                <option value="contratos">Obligaciones y Contratos</option>
+                                <option value="sucesiones">Sucesiones y Herencias</option>
+                                <option value="propiedad">Saneamiento de Propiedad</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="descripcion" rows="5" placeholder="Breve descripción del caso" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-gold" style="width: 100%;">Solicitar Asesoría Legal</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        <div class="container" style="padding: 0;">
+            <h3 style="font-size: 2rem; font-family: 'Playfair Display', serif;">Daniel Meza</h3>
+            <p style="color: var(--text-light); margin-bottom: 1rem;">Abogado Civilista</p>
+            <p>Universidad Peruana Unión | Colegio de Abogados de Lima</p>
+            <p style="font-style: italic; color: var(--secondary-color); margin-top: 1rem;">"Comprometido con la defensa de sus derechos y la búsqueda de soluciones jurídicas efectivas."</p>
+            
+            <div class="footer-links">
+                <a href="#">Política de Privacidad</a>
+                <a href="#">Términos de Uso</a>
+                <a href="#contacto">Contacto</a>
+            </div>
+            
+            <p style="font-size: 0.8rem; border-top: 1px solid #333; padding-top: 2rem; margin-top: 2rem;">
+                &copy; 2026 Daniel Meza. Todos los derechos reservados.
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
